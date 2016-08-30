@@ -28,6 +28,11 @@ public class main {
       hotel.setLocalidad("Medellin"); 
       
       hotelDao.save(hotel);
+//      hotelDao.save(hotel);
+//      hotelDao.save(hotel);
+//      hotelDao.save(hotel);
+//      hotelDao.save(hotel);
+      
     }
 
 }
