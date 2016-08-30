@@ -21,9 +21,9 @@ public class main {
       
       Hotel hotel= new Hotel();
       
-      hotel.setNombre("El Balcon");
-      hotel.setDireccion("Calle Bolivar");
-      hotel.setCategoria("Categoria 1");
+      hotel.setNombre("La Terraza");
+      hotel.setDireccion("Calle Ayacucho");
+      hotel.setCategoria("Categoria 3");
       hotel.setLocalidad("Medellin"); 
       
       hotelDao.save(hotel);
