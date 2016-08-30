@@ -15,7 +15,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class main {
     public static void main(String[] args) {
-      ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("context");
+      ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("context.xml");
       
       HotelDao hotelDao = context.getBean(HotelDao.class);
       
@@ -32,6 +32,7 @@ public class main {
 //      hotelDao.save(hotel);
 //      hotelDao.save(hotel);
 //      hotelDao.save(hotel);
+      //      hotelDao.save(hotel);
       
     }
 
