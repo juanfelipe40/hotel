@@ -15,20 +15,22 @@ import org.springframework.transaction.annotation.Transactional;
 @Repository
 public class TipohabitacionDao {
         
-    @Autowired
+ /**  @Autowired
     
-    private TipohabitacionRepository tipohabitacionrepository;
-    @Transactional
-    public Tipohabitacion save(Tipohabitacion t){
-        if(t.getNumeroHabitaciones()==null){
-            throw new IllegalArgumentException("Ingrese numero habitacion Correcto");
-        }
-        if (tipohabitacionrepository!=null){
-            System.out.println("Holaa-tipo");
+  private TipohabitacionRepository tipohabitacionrepository;
+  @Transactional
+   public Tipohabitacion save(Tipohabitacion t){
+       if(t.getNumeroHabitaciones()==null){
+           throw new IllegalArgumentException("Ingrese numero habitacion Correcto");
+       }
+       if (tipohabitacionrepository!=null){
+       
+    
+    System.out.println("Holaa-tipo");
         }
         return tipohabitacionrepository.save(t);
     }
 }
+*/    
     
-    
-
+}

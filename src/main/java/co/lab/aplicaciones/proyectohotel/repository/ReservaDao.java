@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 
  @Repository
  public class ReservaDao {
-    
+   /** 
     @Autowired
     
     private HotelRepository reservarepository;
@@ -28,8 +28,14 @@ import org.springframework.transaction.annotation.Transactional;
         if (reservarepository!=null){
             System.out.println("Holaa-reserva");
         }
-        return reservarepository.save(r);
-    }
-}
+       return reservarepository.save(r);
     
+   
+    }
+
+ }
+
+  */
+ }
+
 
