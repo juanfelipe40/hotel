@@ -16,10 +16,10 @@ import org.springframework.transaction.annotation.Transactional;
 
  @Repository
  public class ReservaDao {
-   /** 
+ 
     @Autowired
     
-    private HotelRepository reservarepository;
+    private ReservaRepository reservarepository;
     @Transactional
     public Reserva save(Reserva r){
         if(r.getFechaEntrada()==null){
@@ -35,7 +35,7 @@ import org.springframework.transaction.annotation.Transactional;
 
  }
 
-  */
- }
+ 
+ 
 
 

@@ -1,47 +1,42 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package co.lab.aplicaciones.proyectohotel.modelo;
 
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-/**
- *
- * @author Esteban
- */
+
 @Entity
 @Table(name = "cliente")
 public class Cliente {
-    
+
     @Id
-    @Column (name = "Nit")
+    @Column(name = "Nit")
     private int nit;
-    
-    @Column (name = "Nombre")
+
+    @Column(name = "Nombre")
     private String nombre;
-    
-    @Column (name = "Apellido")
+
+    @Column(name = "Apellido")
     private String apellido;
-    
-    @Column (name = "Telefono")
+
+    @Column(name = "Telefono")
     private String telefono;
-    
-    @Column (name = "Celular")
+
+    @Column(name = "Celular")
     private String celular;
-    
-    @Column (name = "Domicilio")
+
+    @Column(name = "Domicilio")
     private String domicilio;
-    
-    @Column (name = "Correo")
+
+    @Column(name = "Correo")
     private String correo;
-   
-    //private List<Reserva> reservas;
+
+    @OneToMany(mappedBy = "cliente")
+    private List<Reserva> reservas;
 
     public int getNit() {
         return nit;
@@ -99,20 +94,13 @@ public class Cliente {
         this.correo = correo;
     }
 
-    //public List<Reserva> getReservas() {
-      //  return reservas;
-    //}
+    public List<Reserva> getReservas() {
+        return reservas;
+    }
 
-    //public void setReservas(List<Reserva> reservas) {
-      //  this.reservas = reservas;
-        //comentario
-        //otrocomentario
-    //}
+    public void setReservas(List<Reserva> reservas) {
+        this.reservas = reservas;
 
-    
-     
-   
-    
-    
-    
+    }
+
 }

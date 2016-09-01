@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package co.lab.aplicaciones.proyectohotel.modelo;
 
 import java.util.Date;
@@ -11,55 +7,53 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
-/**
- *
- * @author Esteban
- */
 
 @Entity
 @Table(name = "Reserva")
 public class Reserva {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column (name = "Codigo_reserva")
-    private int codigoReserva; 
-    
-    @Column (name = "Fecha_Entrada")
+    @Column(name = "Codigo_reserva")
+    private int codigoReserva;
+
+    @Column(name = "Fecha_Entrada")
     private Date fechaEntrada;
-    
-    @Column (name = "Fecha_Salida")
+
+    @Column(name = "Fecha_Salida")
     private Date fechaSalida;
-    
-    @Column (name = "Numero_Ocupantes")
+
+    @Column(name = "Numero_Ocupantes")
     private Date numeroOcupantes;
-    
-    @Column (name = "Numero_Habitaciones")
+
+    @Column(name = "Numero_Habitaciones")
     private Date numeroHabitaciones;
-    
-    //private Cliente cliente;
-    
-    //private Hotel hotel;
+    @ManyToOne
+    @JoinColumn(name = "nit")
+    private Cliente cliente;
 
-    //public Cliente getCliente() {
-      //  return cliente;
-    //}
+    @ManyToOne
+    @JoinColumn(name = "codigoHotel")
+    private Hotel hotel;
 
-    //public void setCliente(Cliente cliente) {
-      //  this.cliente = cliente;
-    //}
+    public Cliente getCliente() {
+        return cliente;
+    }
 
-    //public Hotel getHotel() {
-      //  return hotel;
-    //}
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
 
-    //public void setHotel(Hotel hotel) {
-      //  this.hotel = hotel;
-    //}
-    
-    
+    public Hotel getHotel() {
+        return hotel;
+    }
+
+    public void setHotel(Hotel hotel) {
+        this.hotel = hotel;
+    }
 
     public int getCodigoReserva() {
         return codigoReserva;
@@ -101,6 +95,4 @@ public class Reserva {
         this.numeroHabitaciones = numeroHabitaciones;
     }
 
-    
-            
-}  
+}

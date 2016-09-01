@@ -21,13 +21,13 @@ public class main {
       
       Hotel hotel= new Hotel();
       
-      hotel.setNombre("La Terraza");
-      hotel.setDireccion("Calle Ayacucho");
-      hotel.setCategoria("Categoria 3");
-      hotel.setLocalidad("Medellin"); 
+      hotel.setNombre("tata");
+      hotel.setDireccion("Ctat");
+      hotel.setCategoria("atata");
+      hotel.setLocalidad("tatat"); 
       
       hotelDao.save(hotel);
-      //hotelDao.save(hotel);
+      
     }
 
 }
